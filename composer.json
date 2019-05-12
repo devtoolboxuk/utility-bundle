@@ -1,0 +1,24 @@
+{
+  "name": "devtoolboxuk/utilitybundle",
+  "description": "Basic Utility Bundle",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "devtoolboxuk\\utilitybundle\\": "src/"
+    },
+    "classmap": [
+      "src"
+    ]
+  },
+  "minimum-stability": "dev",
+  "scripts": {
+    "test": "./vendor/bin/phpunit"
+  },
+  "require": {
+    "symfony/console": "~2.8||~4.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  }
+}
