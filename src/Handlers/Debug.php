@@ -11,6 +11,9 @@ class Debug extends Handler
         $this->time_start = microtime(true);
     }
 
+    /**
+     * @return false|string
+     */
     public function executionTime()
     {
         $time_end = microtime(true);

@@ -5,14 +5,22 @@ namespace devtoolboxuk\utilitybundle\handlers;
 class Memory extends Handler
 {
 
-    public function getPeakMemUsage()
+    /**
+     * @param bool $real_usage
+     * @return string
+     */
+    public function getPeakMemUsage($real_usage = false)
     {
-        return $this->formatBytes(memory_get_peak_usage(true));
+        return $this->formatBytes(memory_get_peak_usage($real_usage));
     }
 
-    public function getMemUsage()
+    /**
+     * @param bool $real_usage
+     * @return string
+     */
+    public function getMemUsage($real_usage = false)
     {
-        return $this->formatBytes(memory_get_usage(true));
+        return $this->formatBytes(memory_get_usage($real_usage));
     }
 
 }
