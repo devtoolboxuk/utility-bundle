@@ -12,10 +12,10 @@ class UtilityService
 
     public function __call($method, $arguments)
     {
-        return $this->buildSecurity($method);
+        return $this->buildService($method);
     }
 
-    public function buildSecurity($ruleSpec)
+    public function buildService($ruleSpec)
     {
         try {
             return $this->getFactory()->build($ruleSpec);
