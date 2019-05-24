@@ -14,6 +14,8 @@ Version: 1.0.0
   - [Peak Memory Usage](#Peak Memory Usage)
   - _Debug_
   - [Get execution time](#Get execution time)
+  - _Date_
+  - [Get date](#Get date)
 - [Maintainers](#maintainers)
 
 ## Summary
@@ -54,13 +56,24 @@ $memory->getPeakMemUsage(); //Outputs the peak memory usage
 
 ## Debug
 ```php
-$debug = $this->utility->time();
+$debug = $this->utility->debug();
 ```
 
 #### Get execution time 
  ```php
 $debug->initialise(); 
 $debug->executionTime();
+```
+
+## Date
+```php
+$debug = $this->utility->date();
+```
+
+#### Get date
+ ```php
+$debug->convert(); //Returns the date time of now 
+$debug->convert('2019-02-07T12:00:00'); //Returns 2019-02-07 12:00:00
 ```
 
 ## Maintainers
