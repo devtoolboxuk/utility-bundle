@@ -7,6 +7,8 @@ use Exception;
 
 class Date extends Handler
 {
+    private $dateFormat = 'Y-m-d H:i:s';
+
     /**
      * @param $date
      * @return string|null
