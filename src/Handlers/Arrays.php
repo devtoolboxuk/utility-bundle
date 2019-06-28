@@ -44,4 +44,14 @@ class Arrays extends Handler
         return $flat;
     }
 
+    /**
+     * @param $keys
+     * @param $arr
+     * @return bool
+     */
+    public function multiple_keys_exists($keys, $arr)
+    {
+        return !array_diff_key(array_flip($keys), $arr);
+    }
+
 }
