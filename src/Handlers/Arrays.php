@@ -54,4 +54,23 @@ class Arrays extends Handler
         return !array_diff_key(array_flip($keys), $arr);
     }
 
+    /**
+     * @param $obj
+     * @return array
+     */
+    public function object_to_array($obj)
+    {
+
+        if (is_object($obj) || is_array($obj)) {
+            $ret = (array)$obj;
+            foreach ($ret as &$item) {
+
+                $item = $this->object_to_array($item);
+            }
+            return $ret;
+        } else {
+            return $obj;
+        }
+    }
+
 }
