@@ -109,6 +109,15 @@ class Date extends Handler
      */
     public function datePassed($startDate = null, $checkDate = null)
     {
+
+        if (!$startDate) {
+            $startDate = strtotime("now");
+        }
+
+        if (!$checkDate) {
+            $checkDate = strtotime("now");
+        }
+
         if ($this->convert($startDate) < $this->convert($checkDate)) {
             return true;
         }
