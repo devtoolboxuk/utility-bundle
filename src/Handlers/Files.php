@@ -14,7 +14,7 @@ class Files extends Handler
             if (!$archiveName) {
                 $archiveName = sprintf('%s.zip', $file);
             } else {
-                $archiveName = $this->path . $archiveName;
+                $archiveName = $archiveName;
             }
 
             $result = $zipArchive->open($archiveName, \ZIPARCHIVE::CREATE);
@@ -23,7 +23,7 @@ class Files extends Handler
                 throw new \Exception(sprintf('Failed to open zip archive: %s', $result));
             }
 
-            if (!$zipArchive->addFile($this->path . $file, $file)) {
+            if (!$zipArchive->addFile($file, basename($file))) {
                 throw new \Exception(sprintf('Failed to add file %s to zip archive %s', $file, $archiveName));
             }
 
